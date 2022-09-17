@@ -21,7 +21,7 @@ let resultado =number*number2 //Lo multiplica
 let resultado2 = number - number2//Lo resta, vale la concadenacion solo con la suma
 let resultado3= number + number2
 let nombreNuevo= prompt("decime tu nombre");
-
+// prompt solo devuelve texto los toma omo string, para number usamos parseInt()
 console.log(apellido)
 
 document.write(nombre2);
