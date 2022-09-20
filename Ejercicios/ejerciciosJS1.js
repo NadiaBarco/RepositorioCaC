@@ -7,31 +7,40 @@
 // reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "Hola Nadia!!"
-document.write(nuevaString)
+const nuevaString = "Hola Nadia!!";
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = Number([1,3,4,6]);
+const nuevoNum = [1,3,4,6];
 
 // Crea una variable booleana:
-const nuevoBool = null;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - null === 5;
+const nuevaResta = 10 - 5 === 5;
+
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = null * 4 === 40 ;
+const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === null;
+const nuevoModulo = 21 % 5 === 1;
 
+document.write(nuevaString.concat(nuevoNum[1]),nuevoBool,nuevoModulo);
 
+str=prompt("ingrese un numero")
 
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-
+        if( str<0 || str ==0 ){
+      document.write(`El numero ${str} pertenece al cuerpo de los enteros`);
+    } else{
+      document.write(`El numero ${str} pertenece a los naturales`);
+    }
+   
 }
+
+devolverString(prompt("Ingrese un numero"))
 
 
 function suma(x, y) {
