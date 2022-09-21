@@ -9,6 +9,8 @@
 // Crea una variable "string", puede contener lo que quieras:
 const nuevaString = "Hola Nadia!!";
 
+
+
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = [1,3,4,6];
 
@@ -27,7 +29,9 @@ const nuevoModulo = 21 % 5 === 1;
 
 document.write(nuevaString.concat(nuevoNum[1]),nuevoBool,nuevoModulo);
 
-str=prompt("ingrese un numero")
+
+
+//str=prompt("ingrese un numero")
 
 function devolverString(str) {
   // "Return" la string provista: str
@@ -37,30 +41,48 @@ function devolverString(str) {
     } else{
       document.write(`El numero ${str} pertenece a los naturales`);
     }
-   
 }
 
-devolverString(prompt("Ingrese un numero"))
+devolverString(Number(prompt("Ingrese un numero")))
+
+/*
+cons devolverString = str => document.write(str+ "</br>"); devolverString("Hola Codo a Codo")
+*/ 
 
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-
+    sumaxy= (x + y)
+    document.write(`La suma de ${x} e ${y} es ${sumaxy}`)
 }
+
+suma(Number(prompt("x")),Number(prompt("y")))
+
+
+/**
+const sumar=(x,y)=>{document.write((x+y)+ "</br>")
+suma(10,10)
+ */
+
+
 
 function resta(x, y) {
   // Resta "x" de "y" y devuelve el valor
   // Tu código:
-
+  restaxy=(x-y)
+  document.write(`La resta de ${x} y ${y} es ${restaxy}`)
 }
+resta(Number(prompt("Ingrese un numero x")), (Number(prompt("Ingrese un numero x"))));
+
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-
+  document.write((x*y)+"</br>")
 }
+multiplica(2,9)
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
@@ -72,16 +94,20 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:utilizar if y else
+  document.write((x===Y)+ "</br>")
 
 
 }
+sonIguales(30,20)
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-
+  document.write((str1.Length===str2.Length)+ "</br>")
 }
+
+tienenMismaLongitud("pepe", "elpepe");
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
