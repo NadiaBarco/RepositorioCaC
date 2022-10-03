@@ -27,7 +27,7 @@ const nuevaMultiplicacion = 10 * 4 === 40 ;
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === 1;
 
-document.write(nuevaString.concat(nuevoNum[1]),nuevoBool,nuevoModulo);
+// document.write(nuevaString.concat(nuevoNum[1]),nuevoBool,nuevoModulo);
 
 
 
@@ -37,16 +37,16 @@ function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
         if( str<0 || str ==0 ){
-      document.write(`El numero ${str} pertenece al cuerpo de los enteros`);
+      document.write(`El numero ${str} pertenece al cuerpo de los enteros` + "</br>");
     } else{
-      document.write(`El numero ${str} pertenece a los naturales`);
+      document.write(`El numero ${str} pertenece a los naturales`+ "</br>");
     }
 }
 
 devolverString(Number(prompt("Ingrese un numero")))
 
 /*
-cons devolverString = str => document.write(str+ "</br>"); devolverString("Hola Codo a Codo")
+const devolverString = str => document.write(str+ "</br>"); devolverString("Hola Codo a Codo")
 */ 
 
 
@@ -54,8 +54,8 @@ function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-    sumaxy= (x + y)
-    document.write(`La suma de ${x} e ${y} es ${sumaxy}`)
+    let sumaxy= (x + y)
+    document.write(`La suma de ${x} e ${y} es ${sumaxy}`+ "</br>")
 }
 
 suma(Number(prompt("x")),Number(prompt("y")))
@@ -71,8 +71,8 @@ suma(10,10)
 function resta(x, y) {
   // Resta "x" de "y" y devuelve el valor
   // Tu código:
-  restaxy=(x-y)
-  document.write(`La resta de ${x} y ${y} es ${restaxy}`)
+  let restaxy=(x-y)
+  document.write(`La resta de ${x} y ${y} es ${restaxy}`+ "</br>")
 }
 resta(Number(prompt("Ingrese un numero x")), (Number(prompt("Ingrese un numero x"))));
 
@@ -90,7 +90,7 @@ function divide(x, y) {
 
 }
 
-function sonIguales(x, y) {
+/* function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:utilizar if y else
@@ -98,7 +98,7 @@ function sonIguales(x, y) {
 
 
 }
-sonIguales(30,20)
+sonIguales(30,20) */
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
@@ -189,12 +189,13 @@ function esPositivo(numero) {
 
 }
 
-function agregarSimboloExclamacion(str) {
+const agregarSimboloExclamacion = str=> {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-
-}
+document.write(`${str} !` + "</br>")
+};
+agregarSimboloExclamacion("Hola cac")
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
