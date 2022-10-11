@@ -74,7 +74,7 @@ function resta(x, y) {
   let restaxy=(x-y)
   document.write(`La resta de ${x} y ${y} es ${restaxy}`+ "</br>")
 }
-resta(Number(prompt("Ingrese un numero x")), (Number(prompt("Ingrese un numero x"))));
+resta(2,5);
 
 
 function multiplica(x, y) {
@@ -90,104 +90,138 @@ function divide(x, y) {
 
 }
 
-/* function sonIguales(x, y) {
+const sonIguales=(x, y)=> {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:utilizar if y else
-  document.write((x===Y)+ "</br>")
-
-
+  document.write((x===y)+ "</br>")
 }
-sonIguales(30,20) */
+sonIguales(30,20) 
 
-function tienenMismaLongitud(str1, str2) {
-  // Devuelve "true" si las dos strings tienen la misma longitud
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  document.write((str1.Length===str2.Length)+ "</br>")
-}
 
-tienenMismaLongitud("pepe", "elpepe");
+const tienenMismaLongitud=(str1, str2)=> {
+  document.write((str1.length===str2.length)+ "</br>")
+  }
+  tienenMismaLongitud("pepe", "wpepe")
 
-function menosQueNoventa(num) {
-  // Devuelve "true" si el argumento de la función "num" es menor que noventa
-  // De lo contrario, devuelve "false"
-  // Tu código:
-
+const palabrasIg=(t,h)=>{
+  if (t.length == h.length){
+    document.write("Misma cant. de letras")
+  }else{
+    document.write(`${t} es diferente de ${h}`+ "</br>")
+  }
 }
 
-function mayorQueCincuenta(num) {
-  // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
-  // De lo contrario, devuelve "false"
-  // Tu código:
+palabrasIg("pepe", "elpepe")
+
+
+
+
+const menosQueNoventa=(num)=> {
+    document.write((num<90)+"</br>")
 
 }
+menosQueNoventa(89)
 
-function obtenerResto(x, y) {
-  // Obten el resto de la división de "x" entre "y"
-  // Tu código:
-
-}
-
-function esPar(num) {
-  // Devuelve "true" si "num" es par
-  // De lo contrario, devuelve "false"
-  // Tu código:
-
+const mayorQueCincuenta=(num1)=> {
+  document.write((num1>50)+"</br>")
   
 }
 
-function esImpar(num) {
-  // Devuelve "true" si "num" es impar
-  // De lo contrario, devuelve "false"
+const obtenerResto=(x, y)=> {
+  // Obten el resto de la división de "x" entre "y"
   // Tu código:
+  document.write((x % y) + "</br>")
 
 }
 
-function elevarAlCuadrado(num) {
+const esPar=(numero)=> {
+  // Devuelve "true" si "num" es par
+  // De lo contrario, devuelve "false"
+  // Tu código:
+  if(numero%2 ===0){
+    document.write("es par")
+  }else{
+    document.write("no es par" + "</br>")
+  }
+
+}
+
+esPar(23)
+
+const esImpar=(num2)=> {
+  
+  document.write(((num2%2)===!0)+ "</br>")
+
+}
+esImpar(3)
+
+const elevarAlCuadrado=(cuadn)=> {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
+  document.write((cuadn)*(cuadn), "</br>")
 
 }
 
-function elevarAlCubo(num) {
+elevarAlCuadrado(12)
+
+const elevarAlCubo=(cubon)=> {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-
+    document.write((Math.pow(cubon,3))+ "</br>")
 }
+elevarAlCubo(2)
 
-function elevar(num, exponent) {
+const elevar=(num, exponent)=> {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
+  document.write((Math.pow(num, exponent))+"</br>")
 
 }
+elevar(2,5)
 
-function redondearNumero(num) {
+const redondearNumero=(num)=> {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
+  document.write((Math.round(num))+"</br>")
 
 }
+redondearNumero(3.14159)
 
-function redondearHaciaArriba(num) {
+const redondearHaciaArriba=(num)=> {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-
+    document.write((Math.ceil(num))+ "</br>")
 }
+redondearHaciaArriba(2.71828)
 
-function numeroRandom() {
+const numeroRandom=()=> {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-
+    document.write((Math.random(0,1))+ "</br>")
 }
+numeroRandom()
 
-function esPositivo(numero) {
+const esPositivo=(numero) => {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-
+    if(numero > 0){
+      document.write("Es positivo" + "</br>")
+    }else if (numero < 0){
+      document.write("Es falso" + "</br>")
+    } else{
+      document.write(False)
+    }
 }
+esPositivo(1)
+
+const esPositivo2 = numero => numero === 0? document.write(false + "</br>"):
+numero>0? document.write(true + "</br>"):
+ document.write("es"+false+"</br>")
+esPositivo2(-10)
 
 const agregarSimboloExclamacion = str=> {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -197,17 +231,23 @@ document.write(`${str} !` + "</br>")
 };
 agregarSimboloExclamacion("Hola cac")
 
-function combinarNombres(nombre, apellido) {
+const combinarNombres=(nombre, apellido)=> {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Bruce Wayne" -> "Bruce Wayne"
   // Tu código:
-
+  nombre=["Ana","Juan","Ester","Nadia","Luis","Martin","Jimena","Ariel","Andrea","Gustavo","Ezequiel","Abraham","Abril"]
+  apellido=["Abrahams","Abramson","Adamson","Ainsworth","Albertson","Aniston","Battle","Beckett", "Beckham","Black","Bramson", "Brown","Bullock","Burrell","Bush","Clinton","Cocks","Cook", "Cox","Cranston","Derricks","Disney","Barco"]
+  document.write(`Nombre y apellido generado: ${nombre[5]} ${apellido[12]}`)
 }
+combinarNombres(5,12)
+
+
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
+  
 
 }
 
@@ -244,6 +284,7 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
     //si ingresa una consonante muestre en pantalla dato incorrecto
   //Escribe tu código aquí
-
+  
 
 }
+esVocal(y)
