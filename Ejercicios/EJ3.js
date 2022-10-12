@@ -1,10 +1,13 @@
 // No cambies los nombres de las funciones.
 
-function devolverPrimerElemento(array) {
+const arry=["ana","eli"]
+const numeros=[1,1,2,3,4,5,6,7,7]
+const devolverPrimerElemento=(array)=> {
     // Devuelve el primer elemento de un array
     // Tu código:
+    console.log(array[0])
   }
-  
+  devolverPrimerElemento(arry)
   
   function devolverUltimoElemento(array) {
     // Devuelve el último elemento de un array
@@ -12,10 +15,12 @@ function devolverPrimerElemento(array) {
   }
   
   
-  function obtenerLargoDelArray(array) {
+  const obtenerLargoDelArray=(array)=> {
     // Devuelve el largo de un array
     // Tu código:
+    console.log(array.length)
   }
+  obtenerLargoDelArray(arry)
   
   
   function incrementarPorUno(array) {
@@ -23,60 +28,82 @@ function devolverPrimerElemento(array) {
     // Aumenta cada entero por 1
     // y devuelve el array
     // Tu código:
+
   }
   
   
-  function agregarItemAlFinalDelArray(array, elemento) {
+  const agregarItemAlFinalDelArray=(array, elemento)=> {
     // Añade el "elemento" al final del array
     // y devuelve el array
     // Tu código:
+    array.push(elemento)
+    console.log(array)
   }
+  agregarItemAlFinalDelArray(arry,"Nona")
   
   
-  function agregarItemAlComienzoDelArray(array, elemento) {
+  const agregarItemAlComienzoDelArray=(array, elemento)=> {
     // Añade el "elemento" al comienzo del array
     // y devuelve el array
     // Pista: usa el método `.unshift`
     // Tu código:
+    array.unshift(elemento)
   }
+  agregarItemAlComienzoDelArray(arry, "Mosca")
   
-  
-  function dePalabrasAFrase(palabras) {
+
+  const palabras=['Hello', 'World!']
+  const dePalabrasAFrase=(palabras)=> {
     // "palabras" es un array de strings/cadenas
     // Devuelve un string donde todas las palabras estén concatenadas
     // con espacios entre cada palabra
     // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
     // Tu código:
+    console.log(palabras.join(""))
   }
+  dePalabrasAFrase(palabras)
   
-  
-  function arrayContiene(array, elemento) {
+ const arrayContiene=(array, elemento)=> {
     // Comprueba si el elemento existe dentro de "array"
     // Devuelve "true" si está, o "false" si no está
     // Tu código:
+    console.log(array.includes(elemento))
   }
+  arrayContiene(arry,"Ester")
   
   
-  function agregarNumeros(numeros) {
+  const agregarNumeros=(numeros)=> {
     // "numeros" debe ser un arreglo de enteros (int/integers)
     // Suma todos los enteros y devuelve el valor
     // Tu código:
+    let suma =0
+    for(let i=0;i<numeros.length;i++){
+        suma= suma +numeros[i]
+    }
+    console.log(suma)
   }
   
-  
-  function promedioResultadosTest(resultadosTest) {
+  const num=[10,20,50]
+  const promedioResultadosTest=(resultadosTest)=> {
     // "resultadosTest" debe ser una matriz de enteros (int/integers)
     // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
     // Tu código:
+    let conatdor=0
+    for(let i =0; i<resultadosTest.length;i++){
+        conatdor += resultadosTest[i]
+    }
+    console.log(conatdor /resultadosTest.length)
   }
+  promedioResultadosTest(num)
   
-  
-  function numeroMasGrande(numeros) {
+const numerosMax=[2,35,4,6575,2]
+  const numeroMasGrande=(numeros)=> {
     // "numeros" debe ser una matriz de enteros (int/integers)
     // Devuelve el número más grande
     // Tu código:
+    console.log(Math.max(...numerosMax))
   }
-  
+  numeroMasGrande(numerosMax)
   
   function multiplicarArgumentos() {
     // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
