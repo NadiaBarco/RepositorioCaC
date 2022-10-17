@@ -51,9 +51,20 @@ const obtenerMayor=(x, y)=> {
     // Si "idioma" es "ingles", devuelve "Hello!"
     // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
     // Tu código:
-  console.log(idioma=="aleman"? "Guten Tag!": idioma==="Mnadario"? "Ni Hao!": idioma==="Ingles"? "Hello":"Hola!!")
+    if(idioma=="Aleman"){
+      console.log(  "Guten Tag!")
+    }else if (idioma=="Mnadario"){
+      console.log( "Ni Hao!") 
+    }else if( idioma=="Ingles"){
+      console.log( "Hello")}
+      else{
+        console.log( "Hola!!")
+
+      }
+
   }
-  
+  saludo("Aleman")
+
   function colors(color) {
     //La función recibe un color. Devolver el string correspondiente:
     //En caso que el color recibido sea "blue", devuelve --> "This is blue"
@@ -62,17 +73,38 @@ const obtenerMayor=(x, y)=> {
     //En caso que el color recibido sea "orange", devuelve --> "This is orange"
     //Caso default: devuelve --> "Color not found"
     //Usar el statement Switch.
+
+    switch(color) {
+      case "Blue":
+        console.log("This is blue")
+        break;
+      case "Red":
+        console.log("This is red")
+        break;
+      case "Green":
+        console.log("This is green")
+        break;
+      case "Otange":
+        console.log("This is Orange")
+        break;
+      default:
+        console.log("Console not found")
+    }
   
   
   }
   
-  function esDiezOCinco(numero) {
+  const esDiezOCinco=(numero)=> {
     // Devuelve "true" si "numero" es 10 o 5
     // De lo contrario, devuelve "false"
     // Tu código:
-  
+    //OPCION 1
+    console.log(numero===5? true:numero==10? true: false )
+    //OPCION 2
+    console.log(numero == 5|| numero ==10)
   }
-  
+  esDiezOCinco(4)
+
   function estaEnRango(numero) {
     // Devuelve "true" si "numero" es menor que 50 y mayor que 20
     // De lo contrario, devuelve "false"
